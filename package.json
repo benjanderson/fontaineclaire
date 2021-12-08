@@ -8,7 +8,7 @@
     "production": "webpack --config configuration/webpack.prod.config.js --mode=production",
     "lint:sass": "sass-lint -v -q",
     "lint:js": "eslint --ext .js src/js/",
-    "stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
+    "stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > docs/stats.json && webpack-bundle-analyzer docs/stats.json"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
