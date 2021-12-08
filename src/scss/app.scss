@@ -1,35 +1,76 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-    font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	@apply bg-gray-200 sm:bg-white dark:bg-gray-800 sm:dark:bg-gray-900;
+}
+
+h1 {
+	@apply text-2xl mb-4;
 }
 
 a {
-    @apply underline text-blue-600 hover:text-blue-800;
- }
+	@apply underline text-blue-600 hover:text-blue-800;
+}
 
- .time {
-    @apply text-sm text-gray-600 dark:text-gray-100 block;
- }
+.container {
+	@apply flex justify-center lg:p-24;
+}
 
- .item-desc {
-    @apply text-sm font-semibold block;
- }
+.content {
+	@apply bg-white dark:bg-gray-900 dark:text-gray-300 rounded-lg lg:w-2/3 p-4 lg:shadow
+}
 
- .dot {
-    @apply h-2 w-2 rounded-full block mt-2;    
- }
+.day {
+	@apply text-gray-900 dark:text-gray-100 inline-block uppercase mb-1;
+}
 
- .left {
-     @apply w-1/3 lg:w-2/12 md:w-1/4;
- }
+.time-row {
+	@apply flex mb-2;
+}
 
- .center {
-    @apply w-1/12;
- }
+.time {
+	@apply text-sm text-gray-600 dark:text-gray-100 block;
+}
 
- .right {
-     @apply w-9/12;
- }
+.item-desc {
+	@apply text-sm font-semibold block;
+}
+
+.dot {
+	@apply h-2 w-2 rounded-full block mt-2;
+}
+
+.left {
+	@apply w-1/3 lg:w-2/12 md:w-1/4;
+}
+
+.center {
+	@apply w-1/12;
+}
+
+.right {
+	@apply w-9/12;
+}
+
+.blue {
+	@apply bg-blue-400;
+}
+
+.red {
+	@apply bg-red-400;
+}
+
+.indigo {
+	@apply bg-indigo-600;
+}
+
+.yellow {
+	@apply bg-yellow-400;
+}
+
+.green {
+	@apply bg-green-400;
+}

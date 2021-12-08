@@ -1,8 +1,11 @@
 module.exports = {
 	purge: {
 		enabled: true,
-		content: ['./*.html', './src/**/*.js']
-	},
+		content: [
+		  'src/**/*.js',
+		  'public/**/*.html',
+		]
+	},	
 	darkMode: 'media', // or 'media' or 'class'
 	theme: {
 		screens: {
