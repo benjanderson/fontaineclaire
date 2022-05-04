@@ -4,6 +4,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const webpackConfiguration = require('../webpack.config');
+const CnameWebpackPlugin = require('cname-webpack-plugin');
 
 module.exports = merge(webpackConfiguration, {
   mode: 'production',
@@ -29,5 +30,9 @@ module.exports = merge(webpackConfiguration, {
   },
 
   /* Additional plugins configuration */
-  plugins: [],
+  plugins: [
+    new CnameWebpackPlugin({
+      domain: 'fontaineclaire.com',
+    }),
+  ],
 });
