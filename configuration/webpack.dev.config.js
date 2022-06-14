@@ -3,6 +3,7 @@ const { merge } = require('webpack-merge');
 
 const webpackConfiguration = require('../webpack.config');
 const environment = require('./environment');
+const CnameWebpackPlugin = require('cname-webpack-plugin');
 
 module.exports = merge(webpackConfiguration, {
   mode: 'development',
@@ -34,5 +35,9 @@ module.exports = merge(webpackConfiguration, {
   },
 
   /* Additional plugins configuration */
-  plugins: [],
+  plugins: [
+    new CnameWebpackPlugin({
+      domain: 'fontaineclaire.com',
+    }),
+  ],
 });
