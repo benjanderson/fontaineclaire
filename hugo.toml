@@ -1,5 +1,5 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'FontaineClaire.com'
+title = 'Autumn Oak Ward'
 theme = "paper"
 buildFuture = true
