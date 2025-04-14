@@ -68,6 +68,7 @@
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <header class="entry-header">
     <h2 class="entry-hint-parent">
+      <a href="{{ .Permalink }}">
       {{- .Title }}
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
@@ -77,6 +78,7 @@
         </svg>
       </span>
       {{- end }}
+      </a>
     </h2>
   </header>
   <!-- {{- if (ne (.Param "hideSummary") true) }}
@@ -98,7 +100,7 @@
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  <!-- <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a> -->
 </article>
 {{- end }}
 
